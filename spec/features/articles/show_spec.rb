@@ -21,6 +21,7 @@ RSpec.describe "Article Show Page" do
       visit article_path(@article_1)
       click_link "Delete"
 
+      expect(page).to have_content("The Article has been deleted")
       expect(current_path).to eq(articles_path)
       expect(page).to have_content(@article_2.title)
       expect(page).to_not have_content(@article_1.title)
