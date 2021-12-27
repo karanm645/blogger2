@@ -2,3 +2,4 @@
 <p><%= @article.body %></b>
 <%= link_to "<< Back to Articles List", articles_path %>
 <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete this article?"} %>
+<%= button_to "Update #{@article.title}", edit_article_path(@article), method: :get%>
